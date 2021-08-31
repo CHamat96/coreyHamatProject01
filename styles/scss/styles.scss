@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Roboto&display=swap');
+@import 'partials/vars';
+@import 'partials/setup';
+@import 'partials/typography';
+
+.wrapper {
+  width:1400px;
+  max-width:90%;
+  margin:0 auto;
+}
+
+header {
+  background:darkslategray;
+  display:flex;
+  flex-flow:column wrap;
+  nav {
+    display:flex;
+    align-items:center;
+    .siteAnchor {
+      flex-basis:20%;
+    }
+    .webNavMenu{
+      @include flexList;
+      flex-basis:80%
+    }
+    .mobileNavMenu {
+      display:none;
+    }
+  }
+
+  .siteTitle {
+    align-self:center;
+  }
+}
+  
+

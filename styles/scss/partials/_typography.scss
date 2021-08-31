@@ -1,0 +1,35 @@
+html {
+  font-size:125%;
+}
+
+h1,
+a {
+  font-family:'Josefin Sans', sans-serif;
+  color:$offWhite;
+}
+
+header {
+  a {
+    font-family:'Josefin Sans', sans-serif;
+    text-decoration:none;
+    text-transform:uppercase;
+  }
+  .siteAnchor {
+    font-size:2rem;
+    text-transform:none;
+  }
+  li:hover a,
+  li:focus-within a {
+    color:$sunnyYellow;
+  }
+  h1 {
+    font-size:8.3rem;
+    color:$offWhite;
+    span {
+      display:block;
+      color:$sunnyYellow;
+    }
+  }
+}
+
+
