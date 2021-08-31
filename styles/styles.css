@@ -297,10 +297,6 @@ header nav .siteAnchor {
       flex-basis: 20%;
 }
 header nav .webNavMenu {
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
-}
-header nav .webNavMenu ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -315,6 +311,8 @@ header nav .webNavMenu ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
 }
 header nav .webNavMenu li {
   display: inline-block;

@@ -5,7 +5,6 @@ $sunnyYellow:#F8E71C;
 $green:#0E902D;
 
 @mixin flexList {
-  ul {
     margin:0;
     padding:0;
     list-style:none;
@@ -13,7 +12,6 @@ $green:#0E902D;
     flex-wrap:wrap;
     justify-content:flex-end;
     align-items:center;
-  }
   li {
     display:inline-block;
     padding:0 10px;
