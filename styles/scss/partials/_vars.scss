@@ -4,19 +4,9 @@ $forestGreen:#074115;
 $sunnyYellow:#F8E71C;
 $green:#0E902D;
 
-@mixin flexList {
-    margin:0;
-    padding:0;
-    list-style:none;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-    align-items:center;
-  li {
-    display:inline-block;
-    padding:0 10px;
-  }
-  a {
-    padding:5px;
-  }
+$primaryFont:'Josefin Sans', sans-serif;
+$secondaryFont: 'Roboto', sans-serif;
+
+@mixin headerBackground($backgroundImg){
+  background:$backgroundImg center / cover no-repeat;
 }
