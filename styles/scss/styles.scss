@@ -91,3 +91,27 @@ header {
     min-width:calc(100% - 50px);
   }
 }
+
+.iconGallery > .wrapper {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  @include sectionPadding(50, 0)
+}
+
+.galleryContent {
+  position:relative;
+  margin:0 10px;
+  width:calc(50% - 20px);
+  .iconOverlay{
+    text-align:center;
+    position:absolute;
+    top:25px;
+    left:-50px;
+    background:$sunnyYellow;
+    border-radius:50%;
+    i {
+      padding:10px;
+    }
+  }
+}

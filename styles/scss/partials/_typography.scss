@@ -38,14 +38,22 @@ header {
   li:focus-within a {
     color:$sunnyYellow;
   }
-  h1 {
+    h1 {
     font-size:8.3rem;
     font-weight:400;
     color:#fff;
     span {
       display:block;
       color:$sunnyYellow;
-    }
+    } 
+  } 
+  &.headerContact,
+  &.headerBlog {
+      h1 {
+        font-size:4rem;
+        font-weight:700;
+        line-height:92px;
+      }
   }
 }
 
