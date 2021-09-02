@@ -10,3 +10,38 @@ $secondaryFont: 'Roboto', sans-serif;
 @mixin headerBackground($backgroundImg){
   background:$backgroundImg center / cover no-repeat;
 }
+
+@mixin listReset {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+@mixin listFlex {
+  @include listReset;
+  display:flex;
+  flex-flow:wrap;
+  li {
+    display:inline-block;
+    flex:0 1 5%;
+    padding:0 10px;
+  }
+  a {
+    padding: 5px;
+  }
+}
+
+@mixin headerNav {
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  .siteAnchor {
+    flex: 0 2 10%;
+    margin-right:50px;
+    flex-basis:calc(20% - 55px);
+  }
+}
+
+@mixin sectionPadding ($paddingTB, $paddingLR){
+  padding:$paddingTB * 1px $paddingLR * 1px;
+}
