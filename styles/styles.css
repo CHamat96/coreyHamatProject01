@@ -447,43 +447,33 @@ nav.subPageMenu .wrapper .siteAnchor {
           flex: 0 1 33%;
 }
 
-.blogMain {
-  max-width: 100%;
+.blogFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-
-.blogGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 50px;
-     -moz-column-gap: 50px;
-          column-gap: 50px;
+.blogFlex .blogImgContainer,
+.blogFlex .blogFlexContent {
+  width: calc(50% - 50px);
 }
-.blogGrid .blogImgContainer {
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
+.blogFlex .blogImgContainer {
   background: #F8E71C;
-}
-
-.row01 .blogImgContainer {
-  top: -20px;
-  left: 20px;
-}
-.row01 img {
   position: relative;
-  top: -30px;
-  right: 20px;
+}
+.row01 .blogFlexContent {
+  margin-left: 50px;
 }
 
 .row02 {
   text-align: right;
 }
-.row02 .blogImgContainer {
-  bottom: -40px;
-  right: 20px;
-}
-.row02 .blogImgContainer img {
-  position: relative;
-  left: 20px;
-  bottom: 20px;
+.row02 .blogFlexContent {
+  margin-right: 50px;
 }
