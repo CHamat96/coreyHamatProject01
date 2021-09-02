@@ -459,31 +459,5 @@ nav.subPageMenu .wrapper .siteAnchor {
           column-gap: 50px;
 }
 .blogGrid .blogImgContainer {
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background: #F8E71C;
-}
-
-.row01 .blogImgContainer {
-  top: -20px;
-  left: 20px;
-}
-.row01 img {
-  position: relative;
-  top: -30px;
-  right: 20px;
-}
-
-.row02 {
-  text-align: right;
-}
-.row02 .blogImgContainer {
-  bottom: -40px;
-  right: 20px;
-}
-.row02 .blogImgContainer img {
-  position: relative;
-  left: 20px;
-  bottom: 20px;
+  min-width: calc(100% - 50px);
 }
