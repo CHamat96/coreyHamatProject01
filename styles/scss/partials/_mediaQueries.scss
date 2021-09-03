@@ -1,0 +1,28 @@
+@media(max-width:750px){
+  .blogMain {
+    padding:0;
+  }
+  .blogGrid {
+    flex-direction:column;
+    img {
+      margin:15px 0;
+      max-width:100%;
+      box-shadow:none;
+    }
+    .blogGridContent {
+      margin:15px;
+    }
+  }
+  .leftImg {
+    top:0;
+  }
+  .rightImg {
+    bottom:0;
+  }
+  .sectionFlex {
+    flex-direction:column;
+    .imgContainer {
+      margin-bottom:25px;
+    }
+  }
+}

@@ -59,13 +59,12 @@ header {
 
   section:nth-child(odd){
     background:$offWhite;
-    @include sectionPadding(50, 0)
+    @include sectionPadding(150, 0)
   }
 
 .about {
   .aboutContent {
     text-align:center;
-    @include sectionPadding(100, 0);
     display:flex;
     flex-flow:column wrap;
     align-items:center;
@@ -79,25 +78,45 @@ header {
   }
 }
 
+.blogMain {
+  @include sectionPadding(50, 0);
+}
 
 .blogGrid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  column-gap:50px;
-  img {
-    position:relative;
-    &.leftImage {
-      top:-30px;
-    }
-    &.rightImage {
-      right:0;
-      bottom:-50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  .blogGridContent {
+    flex:5 1 calc(50% - 50px);
+  }
+  &.row01 {
+    .blogGridContent {
+      margin-left:50px;
     }
   }
-  &.row02 {
+  &.row02{
     text-align:right;
+    .blogGridContent {
+      margin-right:50px;
+    }
+  }
+  img {
+    flex:1 5 calc(50% - 50px);
+    position:relative;
+    max-width:calc(50% - 50px);
   }
 }
+
+.leftImg {
+    top:-100px;
+    @include boxShadow (1.05, 1.05);
+}
+
+.rightImg{
+      right:0;
+      bottom:-100px;
+      @include boxShadow (-1.05, 1.05);
+  }
 
 
 
@@ -153,6 +172,12 @@ header {
   }
 }
 
+.founder {
+  img {
+    @include boxShadow(1.05, 1.05)
+  }
+}
+
 footer {
   background:$black;
   text-align:center;
@@ -164,3 +189,14 @@ footer {
     text-decoration:none;
   }
 }
+
+.postImgContainer {
+  img {
+    @include boxShadow (-1.05, 1.05)
+  }
+}
+
+
+
+
+@import 'partials/mediaQueries';

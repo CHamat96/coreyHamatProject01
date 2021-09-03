@@ -45,3 +45,7 @@ $secondaryFont: 'Roboto', sans-serif;
 @mixin sectionPadding ($paddingTB, $paddingLR){
   padding:$paddingTB * 1px $paddingLR * 1px;
 }
+
+@mixin boxShadow ($horizontal, $vertical){
+  box-shadow:$horizontal * 1rem $vertical * 1rem $sunnyYellow;
+}
