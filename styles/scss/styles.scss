@@ -4,8 +4,8 @@
 @import 'partials/forms';
 
 .wrapper {
-  width:1400px;
-  max-width:80%;
+  max-width:1400px;
+  width:80%;
   margin:0 auto;
 }
 
@@ -59,7 +59,7 @@ header {
 
   section:nth-child(odd){
     background:$offWhite;
-    @include sectionPadding(150, 0)
+    @include sectionPadding(100, 25)
   }
 
 .about {
@@ -121,6 +121,7 @@ header {
 
 
 .iconGallery {
+  padding:25px;
   @include listReset;
   display:flex;
   flex-wrap:wrap;
@@ -128,16 +129,15 @@ header {
 }
 
 .galleryContent {
-  flex: 1 2 50%;
+  flex: 2 2 50%;
   display:inline-block;
+  padding:20px;
   position:relative;
-  padding:0 20px;
   width:calc(100% - 40px / 2);
   .iconOverlay{
-    text-align:center;
     position:absolute;
-    top:25px;
-    left:-50px;
+    top:50px;
+    left:-30px;
     background:$sunnyYellow;
     border-radius:50%;
     i {
@@ -152,11 +152,11 @@ header {
   justify-content: space-between;
   .imgContainer {
     position:relative;
-    flex:1 0 calc(30% - 50px);
+    flex:2 0 calc(40% - 50px);
     margin-right:50px;
   }
   .founderContent {
-    flex:0 1 70%;
+    flex:0 2 60%;
   }
 }
 .imgGallery {
@@ -165,11 +165,16 @@ header {
 .imageList {
   @include listReset;
   display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  width:100%;
   li {
-    flex:1 1 auto;
-    padding:0 15px;
-    width:calc(100% - 45px / 3);
+    flex:1 0 auto;
+    padding:15px;
+    width:calc(33% - 15px / 3)
   }
+  
 }
 
 .founder {
