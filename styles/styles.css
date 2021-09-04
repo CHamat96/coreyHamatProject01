@@ -314,9 +314,90 @@ main h3 {
   letter-spacing: 1px;
 }
 
-.contactForm {
+.contactFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.contactInfo {
+  margin-right: 50px;
+  width: calc(30% - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.contactInfo .socialIcons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contactInfo .socialIcons i {
+  padding-right: 0.75rem;
+  color: #0E902D;
+}
+.contactInfo a {
+  text-decoration: none;
+  color: #2C2C2C;
+  margin: 0.5rem 0;
+}
+.contactInfo p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin: 0;
+}
+.contactInfo span {
+  display: block;
+}
+
+.contactFormContainer {
+  width: 70%;
+  height: 15rem;
   -webkit-box-shadow: -1rem 1rem #F8E71C;
           box-shadow: -1rem 1rem #F8E71C;
+  background: #fff;
+  position: absolute;
+  top: -252px;
+  right: 0;
+}
+
+form {
+  background: #ffffff00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+}
+form input,
+form textarea {
+  background: inherit;
+  border: none;
+  border-bottom: 0.1rem solid #0E902D;
+  margin: 10px;
+}
+form input {
+  width: calc(50% - 20px);
+}
+form textarea {
+  resize: none;
+  width: calc(100% - 20px);
+  height: 5rem;
+}
+form button[type=submit] {
+  margin: 10px;
 }
 
 .wrapper {
