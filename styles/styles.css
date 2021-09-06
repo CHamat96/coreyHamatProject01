@@ -845,11 +845,25 @@ footer a {
     bottom: 0;
   }
 
-  .iconGallery {
+  .iconGallery,
+.imgGallery {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .imageList li {
+    width: 100%;
+  }
+  .imageList li img {
+    margin: 0 auto;
   }
 
   .iconOverlay {
@@ -925,14 +939,14 @@ footer a {
   }
 
   .imgGallery {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    padding: 0;
+  }
+  .imgGallery .wrapper {
+    width: 100%;
   }
 
   .imageList li {
-    width: 100%;
+    padding: 0;
   }
 
   .contactFlex {
