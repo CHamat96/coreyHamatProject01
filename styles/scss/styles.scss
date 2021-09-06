@@ -25,7 +25,7 @@ header {
 }
 
 .headerBlog {
-  @include headerBackground(url(../assets/blog-header-1.jpg))
+  @include headerBackground(url(../assets/blog-header-1.jpg));
 }
 .headerContact {
   @include headerBackground(url(../assets/contact-header-1.jpg))
@@ -83,21 +83,21 @@ header {
   @include sectionPadding(50, 0);
 }
 
-.blogGrid {
+.blogFlex {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  .blogGridContent {
+  .blogFlexContent {
     flex:5 1 calc(50% - 50px);
   }
   &.row01 {
-    .blogGridContent {
+    .blogFlexContent {
       margin-left:50px;
     }
   }
   &.row02{
     text-align:right;
-    .blogGridContent {
+    .blogFlexContent {
       margin-right:50px;
     }
   }
