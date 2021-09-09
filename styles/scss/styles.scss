@@ -4,12 +4,6 @@
 @import 'partials/forms';
 @import 'partials/blogs';
 
-.wrapper {
-  max-width:1400px;
-  width:80%;
-  margin:0 auto;
-}
-
 header {
   position:relative;
   display:flex;
@@ -58,10 +52,6 @@ header {
     }
   }
 
-  section:nth-child(odd){
-    background:$offWhite;
-    @include sectionPadding(100, 25)
-  }
 
 .about {
   .aboutContent {
@@ -69,13 +59,6 @@ header {
     display:flex;
     flex-flow:column wrap;
     align-items:center;
-  }
-  .aboutContent h2 {
-    flex:1 2 66%;
-  }
-
-  .aboutContent p {
-    flex:0 1 33%;
   }
 }
 
@@ -153,6 +136,11 @@ header {
   display:flex;
   align-items:center;
   justify-content: space-between;
+  h2 {
+    font-size:2.1rem;
+    letter-spacing:1px;
+    text-align:left;
+  }
   .imgContainer {
     position:relative;
     flex:2 0 calc(40% - 50px);

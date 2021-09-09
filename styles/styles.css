@@ -243,68 +243,107 @@ img {
   height: auto;
 }
 
+section:nth-child(odd) {
+  background: #F0EFED;
+  padding: 100px 25px;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #0E902D;
+  border: 1px solid #0E902D;
+  padding: 10px 25px;
+}
+
 html {
   font-size: 125%;
 }
 
-h1,
-h2,
-h3,
-h4,
-button,
-a {
+h1 {
   font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 8.3rem;
+}
+h1 span {
+  display: block;
+  color: #F8E71C;
 }
 
-h1,
-a,
-button {
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: #2C2C2C;
+  font-size: 2.815rem;
+  text-align: center;
+  letter-spacing: 1.3px;
+}
+
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: #2C2C2C;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: #2C2C2C;
+  font-size: 1rem;
+  line-height: 1.51rem;
+}
+
+a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
   color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 p {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #2C2C2C;
+  font-size: 1rem;
   line-height: 32px;
 }
 
+button {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+}
+
 header a {
-  text-decoration: none;
   text-transform: uppercase;
 }
 header .siteAnchor {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   text-transform: none;
 }
 header li:hover a,
 header li:focus-within a {
   color: #F8E71C;
 }
-header h1 {
-  font-size: 8.3rem;
-  font-weight: 400;
-  color: #fff;
-}
-header h1 span {
-  display: block;
-  color: #F8E71C;
-}
 header.headerContact h1, header.headerBlog h1 {
-  font-size: 4rem;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
+  color: #F8E71C;
+  font-size: 4rem;
   line-height: 92px;
 }
 
-main h2 {
-  font-size: 2.813rem;
-  letter-spacing: 1.3px;
-  margin: 0.5rem;
-}
-main button {
-  background-color: #0E902D;
-  border: 1px solid #0E902D;
-  font-weight: 700;
-  padding: 10px 25px;
-}
 main h3 {
   font-size: 1.6rem;
   letter-spacing: 1px;
@@ -359,7 +398,7 @@ main h3 {
 
 .contactFormContainer {
   width: 70%;
-  height: 15rem;
+  min-height: 16rem;
   -webkit-box-shadow: -1rem 1rem #F8E71C;
           box-shadow: -1rem 1rem #F8E71C;
   background: #fff;
@@ -423,14 +462,20 @@ form button[type=submit] {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
-.blogContent .postTitle p {
+
+.postTitle h2 {
+  text-align: left;
+  font-size: 2.15rem;
+}
+.postTitle p {
   color: #074115;
 }
-.blogContent .postTitle p span {
+.postTitle p span {
   font-style: italic;
   font-weight: 700;
 }
-.blogContent .blogPost {
+
+.blogPost {
   border: 5px solid #F8E71C;
   border-right: none;
   border-top: none;
@@ -459,10 +504,10 @@ form button[type=submit] {
 .commentFlex h4 {
   color: #074115;
   margin: 0;
-  line-height: 1.51rem;
 }
 
 aside {
+  margin-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,12 +529,6 @@ aside .sideBarContent {
 aside .sideBarContent a {
   text-decoration: none;
   color: #2C2C2C;
-}
-
-.wrapper {
-  max-width: 1400px;
-  width: 80%;
-  margin: 0 auto;
 }
 
 header {
@@ -599,11 +638,6 @@ nav.subPageMenu .wrapper .siteAnchor {
       flex-basis: calc(20% - 55px);
 }
 
-section:nth-child(odd) {
-  background: #F0EFED;
-  padding: 100px 25px;
-}
-
 .about .aboutContent {
   text-align: center;
   display: -webkit-box;
@@ -616,16 +650,6 @@ section:nth-child(odd) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.about .aboutContent h2 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 2 66%;
-          flex: 1 2 66%;
-}
-.about .aboutContent p {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33%;
-          flex: 0 1 33%;
 }
 
 .blogMain {
@@ -727,6 +751,11 @@ section:nth-child(odd) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.sectionFlex h2 {
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+  text-align: left;
 }
 .sectionFlex .imgContainer {
   position: relative;
@@ -1006,8 +1035,8 @@ form textarea {
   }
 }
 @media (max-width: 350px) {
-  html {
-    font-size: 95%;
+  section:nth-child(odd) {
+    padding: 50px 15px;
   }
 
   .pageTitle h1 {
@@ -1025,8 +1054,7 @@ form textarea {
   nav .mobileNavMenu {
     display: block;
   }
-  nav .mobileNavMenu i.fa-bars {
+  nav i.fa-bars {
     color: #fff;
-    opacity: 100%;
   }
 }

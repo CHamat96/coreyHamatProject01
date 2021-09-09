@@ -2,71 +2,68 @@ html {
   font-size:125%;
 }
 
-h1,
-h2,
-h3,
-h4,
-button,
+h1 {
+  @include fontBase ($primaryFont, 8.3, 400, #fff);
+  span {
+    display:block;
+    color:$sunnyYellow;
+  } 
+}
+
+h2 {
+  @include fontBase ($primaryFont, 2.815, 700, $black);
+  text-align:center;
+  letter-spacing:1.3px;
+}
+
+h3 {
+  @include fontBase ($primaryFont, 1.6, 700, $black);
+  letter-spacing:1px;
+}
+
+h4 {
+  @include fontBase ($primaryFont, 1, 700, $black);
+  line-height:1.51rem;
+}
+
 a {
-  font-family:$primaryFont;
+  @include fontBase ($primaryFont, 1, 500, #fff);
+  text-decoration:none;
 }
-
-h1,
-a,
-button {
-  color:#fff;
-}
-
 
 p {
-  font-family:$secondaryFont;
+  @include fontBase ($secondaryFont, 1, 400, $black);
   line-height:32px;
+}
+
+button {
+  @include fontBase ($primaryFont, 1, 700, #fff);
+  line-height:1.6rem;
+  letter-spacing:1px;
 }
 
 header {
   a {
-    text-decoration:none;
     text-transform:uppercase;
   }
   .siteAnchor {
-    font-size:1.5rem;
+    font-size:1.75rem;
     text-transform:none;
   }
   li:hover a,
   li:focus-within a {
     color:$sunnyYellow;
   }
-    h1 {
-    font-size:8.3rem;
-    font-weight:400;
-    color:#fff;
-    span {
-      display:block;
-      color:$sunnyYellow;
-    } 
-  } 
   &.headerContact,
   &.headerBlog {
       h1 {
-        font-size:4rem;
-        font-weight:700;
+        @include fontBase($primaryFont, 4, 700, $sunnyYellow);
         line-height:92px;
       }
   }
 }
 
 main {
-  h2 {
-    font-size:2.813rem;
-    letter-spacing:1.3px;
-    margin:0.5rem;
-  }
-  button {
-    background-color:$green;
-    border:1px solid $green;
-    font-weight:700;
-    padding:10px 25px;
-  }
   h3 {
     font-size:1.6rem;
     letter-spacing:1px;

@@ -182,8 +182,8 @@
 
 
 @media(max-width:350px) {
-  html {
-    font-size:95%;
+  section:nth-child(odd) {
+    @include sectionPadding (50, 15)
   }
   .pageTitle {
     h1 {
@@ -200,12 +200,10 @@
     }
     .mobileNavMenu {
       display:block;
+    }
     
     i.fa-bars {
         color:#fff;
-        opacity:100%
       }
-    }
   }
-
 }

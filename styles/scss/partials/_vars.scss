@@ -49,3 +49,10 @@ $secondaryFont: 'Roboto', sans-serif;
 @mixin boxShadow ($horizontal, $vertical){
   box-shadow:$horizontal * 1rem $vertical * 1rem $sunnyYellow;
 }
+
+@mixin fontBase ($fontFamily, $fontSize, $fontWeight, $color) {
+  font-family:$fontFamily;
+  font-weight:$fontWeight;
+  color:$color;
+  font-size:$fontSize * 1rem;
+}

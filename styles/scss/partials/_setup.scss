@@ -14,3 +14,23 @@ img {
   max-width:100%;
   height:auto;
 }
+
+
+section:nth-child(odd){
+  background:$offWhite;
+  @include sectionPadding(100, 25)
+}
+
+
+.wrapper {
+  max-width:1400px;
+  width:80%;
+  margin:0 auto;
+}
+
+
+button {
+  background-color:$green;
+  border:1px solid $green;
+  padding:10px 25px;
+}
