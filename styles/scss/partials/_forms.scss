@@ -47,18 +47,19 @@ form {
     background:#ffffff00;
     display:flex;
     flex-wrap:wrap;
-    padding:10px;
     input,
     textarea {
       background:inherit;
       border:none;
       margin:10px;
+      padding:5px;
       font-family:'Josefin Sans',sans-serif;
       font-weight:300;
     }
     input {
       width:calc(50% - 20px);
       border-bottom:0.05rem solid $green;
+      border-radius:0;
     }
     textarea {
       resize:none;
@@ -67,6 +68,6 @@ form {
       border:0.05rem solid $green;
     }
     button[type="submit"] {
-      margin:10px;
+      margin-left:10px;
     }
 }

@@ -267,10 +267,6 @@ p {
   line-height: 32px;
 }
 
-i {
-  color: #2C2C2C;
-}
-
 header a {
   text-decoration: none;
   text-transform: uppercase;
@@ -379,19 +375,20 @@ form {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10px;
 }
 form input,
 form textarea {
   background: inherit;
   border: none;
   margin: 10px;
+  padding: 5px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
 form input {
   width: calc(50% - 20px);
   border-bottom: 0.05rem solid #0E902D;
+  border-radius: 0;
 }
 form textarea {
   resize: none;
@@ -400,7 +397,7 @@ form textarea {
   border: 0.05rem solid #0E902D;
 }
 form button[type=submit] {
-  margin: 10px;
+  margin-left: 10px;
 }
 
 .blog {
@@ -456,8 +453,8 @@ form button[type=submit] {
 .commentFlex .profileContainer {
   width: 500px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 70%;
-          flex: 1 1 70%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 .commentFlex h4 {
   color: #074115;
@@ -691,19 +688,22 @@ section:nth-child(odd) {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .galleryContent {
   -webkit-box-flex: 2;
-      -ms-flex: 2 2 50%;
-          flex: 2 2 50%;
+      -ms-flex: 2 2 auto;
+          flex: 2 2 auto;
   display: inline-block;
   padding: 20px;
   position: relative;
-  width: calc(100% - 40px / 2);
+  width: calc(50% - 25px / 2);
 }
 .galleryContent .iconOverlay {
   position: absolute;
@@ -714,6 +714,7 @@ section:nth-child(odd) {
 }
 .galleryContent .iconOverlay i {
   padding: 10px;
+  color: #2C2C2C;
 }
 
 .sectionFlex {
@@ -859,15 +860,16 @@ footer a {
             justify-content: center;
   }
 
+  .galleryContent {
+    margin: 10px;
+    width: 100%;
+  }
+
   .imageList li {
     width: 100%;
   }
   .imageList li img {
     margin: 0 auto;
-  }
-
-  .iconOverlay {
-    top: 0;
   }
 
   .sectionFlex {
@@ -933,9 +935,15 @@ footer a {
   }
 }
 @media (max-width: 600px) {
+  header {
+    min-height: 30vh;
+  }
+
   .pageTitle {
-    margin: 25px;
-    font-size: 4rem;
+    margin: 10px;
+  }
+  .pageTitle h1 {
+    font-size: 5rem;
   }
 
   .imgGallery {
@@ -954,6 +962,9 @@ footer a {
     -webkit-box-direction: reverse;
         -ms-flex-flow: column-reverse;
             flex-flow: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .contactInfo,
@@ -985,15 +996,37 @@ form textarea {
   }
 
   .commentFlex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
   .commentFlex .profileContainer {
     width: 250px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 350px) {
+  html {
+    font-size: 95%;
+  }
+
+  .pageTitle h1 {
+    font-size: 3.75rem;
+  }
+
+  header {
+    min-height: 25vh;
+  }
+
+  nav .webNavMenu {
+    visibility: hidden;
+    overflow: hidden;
+  }
+  nav .mobileNavMenu {
+    display: block;
+  }
+  nav .mobileNavMenu i.fa-bars {
+    color: #fff;
+    opacity: 100%;
   }
 }
