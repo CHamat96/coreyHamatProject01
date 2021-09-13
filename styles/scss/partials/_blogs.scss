@@ -37,16 +37,20 @@
 
 .commentFlex {
   display:flex;
-  align-items:flex-start;
-  justify-content: flex-start;
-  .profileContainer {
-    width:500px;
-    flex:1 1 auto;
-  }
-  h4 {
-    color:$forestGreen;
-    margin:0;
-  }
+}
+
+.profileContainer {
+  width:500px;
+  margin-right:50px;
+  flex:1 1 15%;
+}
+
+.commentContent {
+  flex:1 1 85%;
+}
+h4 {
+  color:$forestGreen;
+  margin:0;
 }
 
 aside {

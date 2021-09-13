@@ -488,20 +488,23 @@ form button[type=submit] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
-.commentFlex .profileContainer {
+
+.profileContainer {
   width: 500px;
+  margin-right: 50px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1 1 15%;
+          flex: 1 1 15%;
 }
-.commentFlex h4 {
+
+.commentContent {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 85%;
+          flex: 1 1 85%;
+}
+
+h4 {
   color: #074115;
   margin: 0;
 }
