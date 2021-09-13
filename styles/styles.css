@@ -497,9 +497,15 @@ form button[type=submit] {
 }
 .commentFlex .profileContainer {
   width: 500px;
+  margin-right: 100px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1 1 15%;
+          flex: 1 1 15%;
+}
+.commentFlex .commentContent {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 85%;
+          flex: 1 1 85%;
 }
 .commentFlex h4 {
   color: #074115;
@@ -1034,7 +1040,7 @@ form textarea {
     margin-right: 20px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   section:nth-child(odd) {
     padding: 50px 15px;
   }
