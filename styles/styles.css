@@ -494,6 +494,7 @@ form button[type=submit] {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 15px;
 }
 .commentFlex .profileContainer {
   width: 500px;
