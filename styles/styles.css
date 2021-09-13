@@ -488,23 +488,26 @@ form button[type=submit] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
-
-.profileContainer {
+.commentFlex .profileContainer {
   width: 500px;
-  margin-right: 50px;
+  margin-right: 100px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 15%;
           flex: 1 1 15%;
 }
-
-.commentContent {
+.commentFlex .commentContent {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 85%;
           flex: 1 1 85%;
 }
-
-h4 {
+.commentFlex h4 {
   color: #074115;
   margin: 0;
 }
@@ -1037,7 +1040,7 @@ form textarea {
     margin-right: 20px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   section:nth-child(odd) {
     padding: 50px 15px;
   }
