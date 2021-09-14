@@ -5,6 +5,7 @@ const app = {}
 const commentForm = document.querySelector('.commentForm')
 const commentList = document.querySelector('.postComments')
 
+// When user submits the 'comment' form, grab the value from '#name' <input> and '.comment' <textarea>
 commentForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -14,13 +15,20 @@ commentForm.addEventListener('submit', function(event) {
   const userComment = commentForm.querySelector('textarea');
   const comment = userComment.value;
 
+  // if there is content, then kickstart the next function
   if(userName, comment) {
     app.postComment(userName, comment)
+    // clear content from the 'name' and 'comment' inputs
+    nameInput.value = '';
+    userComment.value = '';
   }
-
-
+  // clear content from 'email' input (if there is content to clear)
+  if(commentForm.querySelector('#email').value){
+    commentForm.querySelector('#email').value = '';
+  }
 })
 
+// use the user's input to create a new comment (including an imgContainer for the user's profile photo (using a placeholder img within))
 app.postComment = (name, comment) => {
   const postDay = new Date();
   const dateString = postDay.toDateString();
@@ -55,10 +63,4 @@ app.postComment = (name, comment) => {
 
   commentList.appendChild(commentContainer);
 
-}
-
-
-
-app.init = function() {
-app.postComment();
 }
